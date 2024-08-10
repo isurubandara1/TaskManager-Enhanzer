@@ -34,11 +34,20 @@ class TaskListScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
+          SizedBox(
+            height: 20,
+          ),
           Expanded(
             child: ListView.builder(
               itemCount: taskViewModel.tasks.length,
               itemBuilder: (context, index) {
-                return TaskItem(task: taskViewModel.tasks[index]);
+                return Container(
+                  margin:
+                      EdgeInsets.symmetric(vertical: 5), // Space between tasks
+                  padding: EdgeInsets.all(8), // Space inside each task
+                  color: Colors.grey[200], // Background color of each task
+                  child: TaskItem(task: taskViewModel.tasks[index]),
+                );
               },
             ),
           ),

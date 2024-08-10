@@ -19,7 +19,15 @@ class EditTaskScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Edit Task'),
+        centerTitle: true,
+        backgroundColor: Colors.amber,
+        title: Text(
+          'Update Task',
+          style: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -51,6 +59,11 @@ class EditTaskScreen extends StatelessWidget {
                 }
               },
               child: Text('Update Task'),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.amber,
+                onPrimary: Colors.black,
+                minimumSize: Size(200, 50),
+              ),
             ),
           ],
         ),
