@@ -11,7 +11,15 @@ class TaskListScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Task Manager'),
+        centerTitle: true,
+        backgroundColor: Colors.amber,
+        title: Text(
+          'Task Manager App',
+          style: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         actions: [
           IconButton(
             icon: Icon(Icons.add),
@@ -24,11 +32,27 @@ class TaskListScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: ListView.builder(
-        itemCount: taskViewModel.tasks.length,
-        itemBuilder: (context, index) {
-          return TaskItem(task: taskViewModel.tasks[index]);
+      body: Column(
+        children: [
+          Expanded(
+            child: ListView.builder(
+              itemCount: taskViewModel.tasks.length,
+              itemBuilder: (context, index) {
+                return TaskItem(task: taskViewModel.tasks[index]);
+              },
+            ),
+          ),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => AddTaskScreen()),
+          );
         },
+        child: Icon(Icons.add),
+        backgroundColor: Colors.amber,
       ),
     );
   }

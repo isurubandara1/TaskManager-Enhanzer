@@ -11,7 +11,15 @@ class AddTaskScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add Task'),
+        centerTitle: true,
+        backgroundColor: Colors.amber,
+        title: Text(
+          'Add Task',
+          style: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -39,7 +47,12 @@ class AddTaskScreen extends StatelessWidget {
                 }
               },
               child: Text('Add Task'),
-            ),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.amber,
+                onPrimary: Colors.black,
+                minimumSize: Size(200, 50),
+              ),
+            )
           ],
         ),
       ),
