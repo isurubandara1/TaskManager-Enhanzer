@@ -33,7 +33,6 @@ class AddTaskScreen extends StatelessWidget {
               TextField(
                 controller: _descriptionController,
                 decoration: InputDecoration(labelText: 'Description'),
-                maxLength: 4,
               ),
               SizedBox(height: 20),
               ElevatedButton(

@@ -51,7 +51,7 @@ class _MyAppState extends State<MyApp> {
       primarySwatch: Colors.amber,
       appBarTheme: const AppBarTheme(
         backgroundColor: Colors.amber,
-        iconTheme: IconThemeData(color: Colors.black), // Ensure icons are white
+        iconTheme: IconThemeData(color: Colors.black), 
       ),
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: Colors.amber,
@@ -62,7 +62,7 @@ class _MyAppState extends State<MyApp> {
         onPrimary: Colors.white,
         background: Colors.white,
       ),
-      // Other theme properties...
+      // Other 
     );
   }
 
@@ -83,7 +83,7 @@ class _MyAppState extends State<MyApp> {
         onPrimary: Colors.white,
         background: Colors.black,
       ),
-      // Other theme properties...
+      // Other
     );
   }
 }

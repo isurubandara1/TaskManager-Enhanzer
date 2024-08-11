@@ -1,16 +1,28 @@
-# taskmanager
+# TaskManager
 
-A new Flutter project.
+## Objective
 
-## Getting Started
+ Mobile application using Flutter that allows users to manage a list of tasks. Users should be able to add, view, update, and delete tasks. The application follows the MVVM architecture pattern and utilizes a local SQLite database for data storage.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### User Interface
+- Design a user-friendly interface for managing tasks.
+- Provide a form to add new tasks.
+- Allow users to edit and delete existing tasks.
+- Display the list of tasks using a `ListView` 
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Architecture
+- Follow the MVVM (Model-View-ViewModel) architecture pattern.
+- Implement Provider state management 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Data Storage
+- SQLite for local data storage.
+
+### Technologies
+- Flutter
+- Dart
+- `sqflite` package for SQLite
+- State management package (Provider)
+
+
+
