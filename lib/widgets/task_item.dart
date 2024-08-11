@@ -13,8 +13,17 @@ class TaskItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(task.title),
-      subtitle: Text(task.description),
+      title: Text(
+        task.title,
+        style: TextStyle(fontSize: 19),
+      ),
+      subtitle: Text(
+        task.description,
+        style: TextStyle(
+          fontSize: 13,
+          fontStyle: FontStyle.italic,
+        ),
+      ),
       trailing: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
