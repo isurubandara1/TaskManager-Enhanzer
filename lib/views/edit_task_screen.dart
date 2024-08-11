@@ -65,6 +65,14 @@ class EditTaskScreen extends StatelessWidget {
                 minimumSize: Size(200, 50),
               ),
             ),
+            SizedBox(
+              height: 20,
+            ),
+            Image.asset(
+              'assets/update.png',
+              width: 200,
+              height: 400,
+            ),
           ],
         ),
       ),

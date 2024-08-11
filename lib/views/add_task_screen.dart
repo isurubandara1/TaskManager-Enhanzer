@@ -21,39 +21,49 @@ class AddTaskScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Padding(
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            TextField(
-              controller: _titleController,
-              decoration: InputDecoration(labelText: 'Title'),
-            ),
-            TextField(
-              controller: _descriptionController,
-              decoration: InputDecoration(labelText: 'Description'),
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                final title = _titleController.text;
-                final description = _descriptionController.text;
-
-                if (title.isNotEmpty && description.isNotEmpty) {
-                  final task = Task(title: title, description: description);
-                  Provider.of<TaskViewModel>(context, listen: false)
-                      .addTask(task);
-                  Navigator.pop(context);
-                }
-              },
-              child: Text('Add Task'),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.amber,
-                onPrimary: Colors.black,
-                minimumSize: Size(200, 50),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              TextField(
+                controller: _titleController,
+                decoration: InputDecoration(labelText: 'Title'),
               ),
-            )
-          ],
+              TextField(
+                controller: _descriptionController,
+                decoration: InputDecoration(labelText: 'Description'),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  final title = _titleController.text;
+                  final description = _descriptionController.text;
+
+                  if (title.isNotEmpty && description.isNotEmpty) {
+                    final task = Task(title: title, description: description);
+                    Provider.of<TaskViewModel>(context, listen: false)
+                        .addTask(task);
+                    Navigator.pop(context);
+                  }
+                },
+                child: Text('Add Task'),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.amber,
+                  onPrimary: Colors.black,
+                  minimumSize: Size(200, 50),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Image.asset(
+                'assets/add.png',
+                width: 200,
+                height: 400,
+              ),
+            ],
+          ),
         ),
       ),
     );
