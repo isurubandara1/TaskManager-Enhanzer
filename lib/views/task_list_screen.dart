@@ -1,9 +1,7 @@
-// lib/views/task_list_screen.dart
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../view_models/task_view_model.dart';
 import 'add_task_screen.dart';
-import 'settings_screen.dart';
 import '../widgets/task_item.dart';
 
 class TaskListScreen extends StatelessWidget {
@@ -44,7 +42,7 @@ class TaskListScreen extends StatelessWidget {
           children: <Widget>[
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: Colors.amber,
               ),
               child: Text(
                 'Task Manager',

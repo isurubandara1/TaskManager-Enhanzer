@@ -29,51 +29,54 @@ class EditTaskScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Padding(
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            TextField(
-              controller: _titleController,
-              decoration: InputDecoration(labelText: 'Title'),
-            ),
-            TextField(
-              controller: _descriptionController,
-              decoration: InputDecoration(labelText: 'Description'),
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                final title = _titleController.text;
-                final description = _descriptionController.text;
-
-                if (title.isNotEmpty && description.isNotEmpty) {
-                  final updatedTask = Task(
-                    id: task.id,
-                    title: title,
-                    description: description,
-                  );
-                  Provider.of<TaskViewModel>(context, listen: false)
-                      .updateTask(updatedTask);
-                  Navigator.pop(context);
-                }
-              },
-              child: Text('Update Task'),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.amber,
-                onPrimary: Colors.black,
-                minimumSize: Size(200, 50),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              TextField(
+                controller: _titleController,
+                decoration: InputDecoration(labelText: 'Title'),
               ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Image.asset(
-              'assets/update.png',
-              width: 200,
-              height: 400,
-            ),
-          ],
+              TextField(
+                controller: _descriptionController,
+                decoration: InputDecoration(labelText: 'Description'),
+                maxLines: 4,
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  final title = _titleController.text;
+                  final description = _descriptionController.text;
+
+                  if (title.isNotEmpty && description.isNotEmpty) {
+                    final updatedTask = Task(
+                      id: task.id,
+                      title: title,
+                      description: description,
+                    );
+                    Provider.of<TaskViewModel>(context, listen: false)
+                        .updateTask(updatedTask);
+                    Navigator.pop(context);
+                  }
+                },
+                child: Text('Update Task'),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.amber,
+                  onPrimary: Colors.black,
+                  minimumSize: Size(200, 50),
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Image.asset(
+                'assets/update.png',
+                width: 200,
+                height: 400,
+              ),
+            ],
+          ),
         ),
       ),
     );
