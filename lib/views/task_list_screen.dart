@@ -19,8 +19,8 @@ class TaskListScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
-          'Task Manager App',
+        title: const Text(
+          '𝚃𝚊𝚜𝚔 𝙼𝚊𝚗𝚊𝚐𝚎𝚛 𝙰𝚙𝚙',
           style: TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.bold,
@@ -28,7 +28,7 @@ class TaskListScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.settings),
+            icon: const Icon(Icons.settings),
             onPressed: () {
               Navigator.pushNamed(
                 context,
@@ -42,7 +42,7 @@ class TaskListScreen extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            DrawerHeader(
+            const DrawerHeader(
               decoration: BoxDecoration(
                 color: Colors.blue,
               ),
@@ -81,7 +81,7 @@ class TaskListScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Expanded(
