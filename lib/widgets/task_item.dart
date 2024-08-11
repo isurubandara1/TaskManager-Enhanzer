@@ -15,11 +15,11 @@ class TaskItem extends StatelessWidget {
     return ListTile(
       title: Text(
         task.title,
-        style: TextStyle(fontSize: 19),
+        style: const TextStyle(fontSize: 19),
       ),
       subtitle: Text(
         task.description,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 13,
           fontStyle: FontStyle.italic,
         ),

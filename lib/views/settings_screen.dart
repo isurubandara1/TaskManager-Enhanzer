@@ -1,4 +1,3 @@
-// lib/views/settings_screen.dart
 import 'package:flutter/material.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -30,7 +29,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
         padding: EdgeInsets.all(16.0),
         child: Column(
           children: [
-            Text(
+            const Text(
               'Select Theme',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),

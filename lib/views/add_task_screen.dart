@@ -13,7 +13,7 @@ class AddTaskScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.amber,
-        title: Text(
+        title: const Text(
           'Add Task',
           style: TextStyle(
             fontSize: 25,
@@ -55,7 +55,7 @@ class AddTaskScreen extends StatelessWidget {
                   minimumSize: Size(200, 50),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Image.asset(

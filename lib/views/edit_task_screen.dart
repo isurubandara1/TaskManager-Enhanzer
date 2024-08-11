@@ -1,4 +1,3 @@
-// lib/views/edit_task_screen.dart
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../view_models/task_view_model.dart';
@@ -21,7 +20,7 @@ class EditTaskScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.amber,
-        title: Text(
+        title: const Text(
           'Update Task',
           style: TextStyle(
             fontSize: 25,
@@ -67,7 +66,7 @@ class EditTaskScreen extends StatelessWidget {
                   minimumSize: Size(200, 50),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Image.asset(

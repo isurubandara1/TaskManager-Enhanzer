@@ -21,6 +21,7 @@ class _MyAppState extends State<MyApp> {
     return ChangeNotifierProvider(
       create: (_) => TaskViewModel(),
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Task Manager App',
         theme: _isDarkMode ? _darkTheme : _lightTheme,
         home: TaskListScreen(

@@ -70,8 +70,7 @@ class TaskListScreen extends StatelessWidget {
             ListTile(
               title: Text('About'),
               onTap: () {
-                Navigator.pop(context); // Close the drawer
-                // Navigate to about screen or perform other actions
+                Navigator.pop(context);
               },
             ),
           ],
