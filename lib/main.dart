@@ -48,15 +48,15 @@ class _MyAppState extends State<MyApp> {
     return ThemeData(
       brightness: Brightness.light,
       primarySwatch: Colors.amber,
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
         backgroundColor: Colors.amber,
         iconTheme: IconThemeData(color: Colors.black), // Ensure icons are white
       ),
-      floatingActionButtonTheme: FloatingActionButtonThemeData(
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: Colors.amber,
       ),
       scaffoldBackgroundColor: Colors.white,
-      colorScheme: ColorScheme.light(
+      colorScheme: const ColorScheme.light(
         primary: Colors.amber,
         onPrimary: Colors.white,
         background: Colors.white,
@@ -69,15 +69,15 @@ class _MyAppState extends State<MyApp> {
     return ThemeData(
       brightness: Brightness.dark,
       primarySwatch: Colors.brown,
-      appBarTheme: AppBarTheme(
+      appBarTheme: const AppBarTheme(
         backgroundColor: Colors.amber,
-        iconTheme: IconThemeData(color: Colors.white), // Ensure icons are white
+        iconTheme: IconThemeData(color: Colors.white),
       ),
-      floatingActionButtonTheme: FloatingActionButtonThemeData(
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: Colors.amber,
       ),
       scaffoldBackgroundColor: Colors.black,
-      colorScheme: ColorScheme.dark(
+      colorScheme: const ColorScheme.dark(
         primary: Colors.brown,
         onPrimary: Colors.white,
         background: Colors.black,
